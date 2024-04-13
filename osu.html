@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>osu! to glyph</title>
+</head>
+<body>
+    <div class="top-panel">
+        <div class="logo">
+            <div class="button" id="logo" onclick="window.location.href = '/' "><span class="b-text">Taiixu</div>
+        </div>
+        <div class="center">
+            <div class="button" id="main-page" onclick="window.location.href = '/' ">Taiixu</div>
+            <div class="d after-logo"></div>
+            <div class="button active" id="glyph-tools" onclick=" window.location.href = '/tools' ">Custom Glyph Tools</div>
+            <div class="d"></div>
+            <div class="button" id="glyph-osu" onclick=" window.location.href = '/osu' ">osu! to Glyph</div>
+            <div class="d"></div>
+            <div class="button" id="ringtones-lib" onclick=" window.location.href = 'https://miguel-antunes.outsystemscloud.com/GlyphComposerSoundSphere/Ringtones' ">Ringtones Library</div>
+            <div class="d"></div>
+            <div class="button" id="ringtone-trim" onclick=" window.location.href = '/trim' ">Trim Ringtone</div>
+        </div>
+    </div>
+    
+    <div class="content-box">
+        <h1>osu! to glyph</h1>
+        <h4>by <a href="https://github.com/taiixu" target="_blank">Taiixu</a></h4>
+        <div class="app-box">
+            Convert osu! beatmapsets to label file for custom nothing glyph tools <br>
+            You can find beatmapsets on this site: <a href="https://osu.ppy.sh/beatmapsets" target="_blank">osu.ppy.sh/beatmapsets</a>
+            <div class="button-box">
+                <span class="button-d">
+                    Beatmapset file (.osz): 
+                    <div class="c-button" onclick="BeatMapSetUpload()">Upload</div>
+                    <span class="path p-m" id="osu-filename"></span>
+                </span>
+
+                <span class="button-d">
+                    <span class="path-mobile">
+                        Filename: 
+                        <span class="path" id="osu-filename-m"></span>
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="params">
+            <p>Params</p>
+
+            <span class="button-d">
+                Version: 
+                <select name="" id="ver" class="custom-select">
+                    <option value="v2">v2</option>
+                    <option value="v1">v1</option>
+                </select>
+            </span>
+
+            <span class="button-d" >
+                Map:
+                <select name="" id="maps"></select>
+            </span>
+
+            <span class="button-d">
+                Note Size: <input type="text" name="" id="ns" placeholder="Default: 24">
+            </span>
+
+            <span class="button-d v2">
+                Seed: <input type="text" id="seed" placeholder="Default: 1234">
+            </span>
+
+            <span class="button-d v2">
+                For NP2? <input type="checkbox" name="" id="np2">
+            </span>
+
+            <div class="confirm-button" onclick="Make()">Make</div>
+        </div>
+        <div class="out-box">
+            <p>Output</p>
+            <div class="terminal" id="terminal">
+                
+            </div>
+            <div class="output-buttons">
+                <div class="c-inactive-button" id="download-audio">Download audio</div>
+                <div class="b-div"></div>
+                <div class="c-inactive-button" id="download-label">Download label</div>
+                <div class="b-div"></div>
+                <div class="c-inactive-button" id="download-glypha">Download glypha</div>
+                <div class="b-div"></div>
+                <div class="c-inactive-button" id="download-glyphc">Download glyphc1</div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/osu-glyph.js"></script>
+</body>
+</html>

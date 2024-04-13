@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Ringtone Trimmer</title>
+</head>
+<body>
+    <div class="top-panel">
+        <div class="logo">
+            <div class="button" id="logo" onclick="window.location.href = '/' "><span class="b-text">Taiixu</div>
+        </div>
+        <div class="center">
+            <div class="button" id="main-page" onclick="window.location.href = '/' ">Taiixu</div>
+            <div class="d after-logo"></div>
+            <div class="button active" id="glyph-tools" onclick=" window.location.href = '/tools' ">Custom Glyph Tools</div>
+            <div class="d"></div>
+            <div class="button" id="glyph-osu" onclick=" window.location.href = '/osu' ">osu! to Glyph</div>
+            <div class="d"></div>
+            <div class="button" id="ringtones-lib" onclick=" window.location.href = 'https://miguel-antunes.outsystemscloud.com/GlyphComposerSoundSphere/Ringtones' ">Ringtones Library</div>
+            <div class="d"></div>
+            <div class="button" id="ringtone-trim" onclick=" window.location.href = '/trim' ">Trim Ringtone</div>
+        </div>
+    </div>
+    <div class="content-box">
+        <h1>Trim Ringtone</h1>
+        <h4>by <a href="https://github.com/taiixu" target="_blank">Taiixu</a></h4>
+        <div class="app-box">
+            Trim your nothing phone ringtone here<br>
+            This utility also trims audio meta data, so you will get a ringtone without glyphs unsynchronization.<br>
+            This page may not work correctly on phones (especially iphones).
+            <div class="button-box">
+                <span class="button-d">
+                    Audio file (.ogg): 
+                    <div class="c-button" onclick="AudioUpload()">Upload</div>
+                    <span class="path p-m" id="audio-filename"></span>
+                </span>
+
+                <span class="button-d">
+                    <span class="path-mobile">
+                        Filename: 
+                        <span class="path" id="audio-filename-m"></span>
+                    </span>
+                </span>
+            </div>
+            <canvas id="audio-waveform"></canvas>
+            <div class="audio-panel">
+                <div class="c-button" onclick="play()" id="play-button">Play</div>
+                <div class="c-button" id="stop-button" onclick="stop_playing()">Stop</div>
+                <div class="currentTimeDiv"><div class="currentTime" id="current-time">00:00</div> - <div class="currentTime" id="duration">00:00</div></div>
+            </div>
+            <div class="trim-panel">
+                <div class="c-button" onclick="resetTrim()">Reset All</div>
+                <div class="c-button" onclick="cursor1_pos=0;draw()">Reset 1</div>
+                <div class="c-button" onclick="cursor2_pos=1;draw()">Reset 2</div>
+                <div class="c-button" onclick="cursor1_pos=main_cursor_pos;draw()">Move 1 to cursor</div>
+                <div class="c-button" onclick="cursor2_pos=main_cursor_pos;draw()">Move 2 to cursor</div>
+                <div class="trimTimeDiv"><div class="currentTime" id="time-to">00:00.00</div><div class="currentTime" id="time-ss">00:00.00</div></div>
+            </div>
+            <div id="debug">
+                pls upload your audio 
+            </div>
+            <div class="confirm-button" id="make-button" onclick="Make()">Make</div>
+        </div>
+    </div>
+    <script src="js/trim.js"></script>
+</body>
+</html>

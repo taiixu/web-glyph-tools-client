@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <title>Glyph Tools</title>
+</head>
+<body>
+    <div class="top-panel">
+        <div class="logo">
+            <div class="button" id="logo" onclick="window.location.href = '/' "><span class="b-text">Taiixu</div>
+        </div>
+        <div class="center">
+            <div class="button" id="main-page" onclick="window.location.href = '/' ">Taiixu</div>
+            <div class="d after-logo"></div>
+            <div class="button active" id="glyph-tools" onclick=" window.location.href = '/tools' ">Custom Glyph Tools</div>
+            <div class="d"></div>
+            <div class="button" id="glyph-osu" onclick=" window.location.href = '/osu' ">osu! to Glyph</div>
+            <div class="d"></div>
+            <div class="button" id="ringtones-lib" onclick=" window.location.href = 'https://miguel-antunes.outsystemscloud.com/GlyphComposerSoundSphere/Ringtones' ">Ringtones Library</div>
+            <div class="d"></div>
+            <div class="button" id="ringtone-trim" onclick=" window.location.href = '/trim' ">Trim Ringtone</div>
+        </div>
+    </div>
+    
+    <div class="content-box">
+        <h1>Custom Nothing Glyph Tools</h1>
+        <h4>by <a href="https://github.com/SebiAi/custom-nothing-glyph-tools" target="_blank">SebiAi</a></h4>
+        <div class="app-box">
+            Make your custom ringtone here
+            <div class="button-box">
+                <span class="button-d">
+                    Audio file: 
+                    <div class="c-button" onclick="AudioUpload()">Upload</div>
+                    <span class="path p-m" id="audio-filename"></span>
+                </span>
+                <span class="button-d">
+                    Label file: 
+                    <div class="c-button" onclick="LabelUpload()">Upload</div>
+                    <span class="path p-m" id="label-filename"></span>
+                </span>
+
+                <span class="button-d">
+                    <span class="path-mobile">
+                        Audio filename: 
+                        <span class="path" id="audio-filename-m"></span>
+                    </span>
+                </span>
+
+                <span class="button-d">
+                    <span class="path-mobile">
+                        Label filename: 
+                        <span class="path" id="label-filename-m"></span>
+                    </span>
+                </span>
+            </div>
+            <div class="confirm-button" onclick="Make()">Make</div>
+        </div>
+        <div class="out-box">
+            <p>Output</p>
+            <div class="terminal" id="terminal">
+                
+            </div>
+            <div class="output-buttons">
+                <div class="c-inactive-button" id="download-audio">Download audio</div>
+                <div class="b-div"></div>
+                <div class="c-inactive-button" id="download-glyphc">Download glyphc1</div>
+                <div class="b-div"></div>
+                <div class="c-inactive-button" id="download-glypha">Download glypha</div>
+            </div>
+        </div>
+    </div>
+    <script src="js/custom-glyph.js"></script>
+</body>
+</html>
