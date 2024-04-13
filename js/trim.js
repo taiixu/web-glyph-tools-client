@@ -79,7 +79,7 @@ let make_button = document.getElementById('make-button');
 let error_color = "#f00000ff";
 let default_text_color = "#ffffff7f";
 
-let message = "Upload your ringtone alove";
+let message = "Upload your ringtone above";
 let color = default_text_color;
 let isError = false;
 
